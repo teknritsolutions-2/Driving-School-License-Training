@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ApexDrive - Premier Driver Training &amp; License Academy</title>
+  <meta name="description"
+    content="Certified driving school offering comprehensive four-wheeler, two-wheeler, and manual transmission driver education with licensed professional instructors.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo-mark.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Design System -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+
+<body>
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Utility Bar (High Contrast) -->
+  <div class="topbar">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <div class="d-flex align-items-center gap-3">
+        <span><i class="bi bi-telephone-fill me-1"></i> (555) 234-5678</span>
+        <span class="d-none d-md-inline"><i class="bi bi-geo-alt-fill me-1"></i> 742 Safety Blvd, Metro City</span>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <span class="badge-apex badge-primary"><i class="bi bi-shield-check me-1"></i> Certified Driving
+          Instructors</span>
+        <a href="booking.html" class="topbar-cta-btn ms-2">Book Lesson</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Navigation Header (Tablet/Mobile: Logo + Hamburger Only) -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-apex" aria-label="Main Navigation">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="../assets/images/logo.svg" alt="ApexDrive" class="brand-logo-svg" height="42">
+        </a>
+
+        <!-- Tablet & Mobile Hamburger Button Only -->
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#publicNavDrawer" aria-controls="publicNavDrawer" aria-label="Open Navigation Menu">
+          <i class="bi bi-list"></i>
+        </button>
+
+        <!-- Desktop Navigation Bar (>=992px) -->
+        <div class="collapse navbar-collapse d-none d-lg-flex" id="mainNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="homeDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item active" href="index.html"><i class="bi bi-house-door me-2"></i> Home Page
+                    1</a></li>
+                <li><a class="dropdown-item" href="home-2.html"><i class="bi bi-lightning-charge me-2"></i> Home Page
+                    2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="instructors.html">Instructors</a></li>
+            <li class="nav-item"><a class="nav-link" href="vehicles.html">Vehicles</a></li>
+            <li class="nav-item"><a class="nav-link" href="fees.html">Fees</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+
+          <div class="nav-actions d-none d-lg-flex">
+            <button type="button" class="theme-toggle-btn" aria-label="Toggle theme">
+              <i class="bi bi-moon-stars-fill"></i>
+            </button>
+            <button type="button" class="rtl-toggle-btn" aria-label="Toggle direction">
+              <span class="dir-badge fw-bold" style="font-size: 0.75rem;">LTR</span>
+            </button>
+            <a href="login.html" class="btn btn-outline-secondary btn-sm">Login</a>
+            <a href="dashboard/student-dashboard.html" class="btn btn-primary btn-sm">
+              <i class="bi bi-person-badge me-1"></i> Student Portal
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Public Navigation Offcanvas Drawer (Tablet & Mobile) -->
+  <div class="offcanvas offcanvas-start offcanvas-apex" tabindex="-1" id="publicNavDrawer"
+    aria-labelledby="publicNavDrawerLabel">
+    <div class="offcanvas-header border-bottom">
+      <a class="navbar-brand" href="index.html" id="publicNavDrawerLabel">
+        <img src="../assets/images/logo.svg" alt="ApexDrive" class="brand-logo-svg" height="38">
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between p-4">
+      <div>
+        <ul class="nav flex-column gap-1 mb-4">
+          <li class="nav-item">
+            <a class="nav-link drawer-link active" href="index.html"><i class="bi bi-house-door"></i> Home Page 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link drawer-link" href="home-2.html"><i class="bi bi-lightning-charge"></i> Home Page 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link drawer-link" href="about.html"><i class="bi bi-info-circle"></i> About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link drawer-link" href="courses.html"><i class="bi bi-journal-text"></i> Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link drawer-link" href="instructors.html"><i class="bi bi-person-badge"></i> Instructors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link drawer-link" href="vehicles.html"><i class="bi bi-car-front"></i> Fleet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link drawer-link" href="fees.html"><i class="bi bi-cash-stack"></i> Tuition &amp; Fees</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link drawer-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a>
+          </li>
+        </ul>
+
+        <div class="d-flex flex-column gap-2 mb-4">
+          <a href="dashboard/student-dashboard.html" class="btn btn-primary w-100">
+            <i class="bi bi-person-badge me-1"></i> Student Portal
+          </a>
+          <a href="login.html" class="btn btn-outline-secondary w-100">
+            <i class="bi bi-box-arrow-in-right me-1"></i> Student Login
+          </a>
+        </div>
+      </div>
+
+      <!-- Redesigned Display Settings Block (Theme & Direction) -->
+      <div class="drawer-display-settings">
+        <div class="settings-title">
+          <i class="bi bi-sliders2"></i> Display Settings
+        </div>
+
+        <!-- Theme Selection -->
+        <div class="drawer-setting-group">
+          <label class="drawer-setting-label">Theme</label>
+          <div class="drawer-segmented-control" role="group" aria-label="Theme Selection">
+            <button type="button" class="segmented-btn" data-theme-set="light" aria-pressed="true">
+              <i class="bi bi-sun-fill"></i> Light
+            </button>
+            <button type="button" class="segmented-btn" data-theme-set="dark" aria-pressed="false">
+              <i class="bi bi-moon-stars-fill"></i> Dark
+            </button>
+          </div>
+        </div>
+
+        <!-- Direction Selection -->
+        <div class="drawer-setting-group">
+          <label class="drawer-setting-label">Direction</label>
+          <div class="drawer-segmented-control" role="group" aria-label="Text Direction Selection">
+            <button type="button" class="segmented-btn" data-dir-set="ltr" aria-pressed="true">
+              LTR
+            </button>
+            <button type="button" class="segmented-btn" data-dir-set="rtl" aria-pressed="false">
+              RTL
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Main Content Area -->
+  <main id="main-content">
+
+    <!-- 1. Hero Section -->
+    <section class="hero-banner-main">
+      <div class="container">
+        <div class="hero-banner-content reveal-item">
+          <span class="badge-apex badge-accent mb-3">
+            <i class="bi bi-shield-check"></i> Licensed Driver Training Academy
+          </span>
+          <h1>Master the Road with Calm, Confident Precision</h1>
+          <p>
+            Structured behind-the-wheel driver training led by certified senior instructors. We turn nervous beginners
+            into skilled, defensive drivers ready for the road test.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="booking.html" class="btn btn-primary btn-lg">
+              <i class="bi bi-calendar2-check me-1"></i> Book Your First Lesson
+            </a>
+            <a href="courses.html" class="btn btn-outline-light btn-lg">
+              <i class="bi bi-journal-text me-1"></i> Explore Training Courses
+            </a>
+          </div>
+
+          <!-- Trust Strip -->
+          <div class="hero-trust-strip reveal-item reveal-delay-1">
+            <div class="hero-trust-item">
+              <i class="bi bi-car-front-fill"></i>
+              <span>Dual-Control Fleet</span>
+            </div>
+            <div class="hero-trust-item">
+              <i class="bi bi-award-fill"></i>
+              <span>Certified Instructors</span>
+            </div>
+            <div class="hero-trust-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>Doorstep Pickup Available</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Trust Statistics Ribbon (Rule A: pb-0) -->
+    <section class="section-py bg-surface pb-0">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-6 col-md-3 reveal-item">
+            <div class="stat-card-apex">
+              <div class="stat-value stat-number" data-target="15" data-suffix="+">15+</div>
+              <div class="stat-label">Years Academy Experience</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 reveal-item reveal-delay-1">
+            <div class="stat-card-apex">
+              <div class="stat-value stat-number" data-target="100" data-suffix="%">100%</div>
+              <div class="stat-label">Dual-Control Safety</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 reveal-item reveal-delay-2">
+            <div class="stat-card-apex">
+              <div class="stat-value stat-number" data-target="24" data-suffix="">24</div>
+              <div class="stat-label">Modern Training Fleet</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 reveal-item reveal-delay-3">
+            <div class="stat-card-apex">
+              <div class="stat-value stat-number" data-target="18" data-suffix="">18</div>
+              <div class="stat-label">Competencies Evaluated</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Core Programs & Features (Responsive Carousel: 3-col Desktop, 2-col Tablet, 1-col Mobile) -->
+    <section class="section-py bg-surface">
+      <div class="container">
+        <div class="section-header text-center reveal-item">
+          <span class="section-tag">Driver Education Excellence</span>
+          <h2>Why Learners Choose ApexDrive Academy</h2>
+          <p class="text-muted">A structured learning pathway designed to build muscle memory, hazard awareness, and
+            road test readiness.</p>
+        </div>
+
+        <div class="responsive-carousel desktop-grid" data-carousel>
+          <div class="d-flex justify-content-end mb-3 d-lg-none">
+            <div class="carousel-controls">
+              <button type="button" class="carousel-btn carousel-prev" aria-label="Previous slide"><i
+                  class="bi bi-chevron-left"></i></button>
+              <button type="button" class="carousel-btn carousel-next" aria-label="Next slide"><i
+                  class="bi bi-chevron-right"></i></button>
+            </div>
+          </div>
+
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <!-- Feature 1 -->
+              <div class="carousel-slide">
+                <div class="feature-card">
+                  <div class="feature-icon-wrap">
+                    <i class="bi bi-shield-shaded"></i>
+                  </div>
+                  <h3 class="h5 mb-2">Dual-Control Safety Fleet</h3>
+                  <p class="text-muted small mb-0">Every academy vehicle features dual instructor pedals, emergency
+                    overrides, and extra mirrors for complete security in all traffic conditions.</p>
+                </div>
+              </div>
+
+              <!-- Feature 2 -->
+              <div class="carousel-slide">
+                <div class="feature-card">
+                  <div class="feature-icon-wrap">
+                    <i class="bi bi-person-video3"></i>
+                  </div>
+                  <h3 class="h5 mb-2">Patient, Certified Coaching</h3>
+                  <p class="text-muted small mb-0">Our state-licensed instructors specialize in calm, stress-free
+                    coaching designed to overcome driving anxiety and build lasting confidence.</p>
+                </div>
+              </div>
+
+              <!-- Feature 3 -->
+              <div class="carousel-slide">
+                <div class="feature-card">
+                  <div class="feature-icon-wrap">
+                    <i class="bi bi-signpost-split"></i>
+                  </div>
+                  <h3 class="h5 mb-2">Road Test Route Simulations</h3>
+                  <p class="text-muted small mb-0">Practice directly on official testing center routes, complex
+                    roundabouts, and multi-lane intersections using standardized scoring rubrics.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Featured Driving Courses Catalog (Responsive Carousel) -->
+    <section class="section-py bg-surface-alt">
+      <div class="container">
+        <div class="section-header-row reveal-item">
+          <div>
+            <span class="section-tag">Curriculum Tracks</span>
+            <h2>Comprehensive Training Programs</h2>
+            <p class="text-muted mb-0">Programs tailored for complete beginners, manual transmission learners, and road
+              test candidates.</p>
+          </div>
+          <div class="d-flex align-items-center gap-3">
+            <a href="courses.html" class="btn btn-outline-primary">
+              View All Courses &rarr;
+            </a>
+            <div class="carousel-controls d-lg-none">
+              <button type="button" class="carousel-btn carousel-prev" aria-label="Previous course"><i
+                  class="bi bi-chevron-left"></i></button>
+              <button type="button" class="carousel-btn carousel-next" aria-label="Next course"><i
+                  class="bi bi-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="responsive-carousel desktop-grid" data-carousel>
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <!-- Course 1 -->
+              <div class="carousel-slide">
+                <div class="course-card">
+                  <div class="course-card-img-wrap">
+                    <img src="../assets/images/course-beginner-car.jpg" alt="Beginner Driver License Program"
+                      loading="lazy">
+                    <span class="course-card-badge badge-primary"><i class="bi bi-star-fill me-1"></i> Most
+                      Popular</span>
+                  </div>
+                  <div class="course-card-body">
+                    <h3 class="h5 text-heading mb-2">Beginner Driver License Program</h3>
+                    <p class="text-muted small mb-0">Foundational driving instruction covering controls, traffic
+                      laws,mirror discipline, and precision parking.</p>
+                    <div class="course-meta-grid">
+                      <div class="course-meta-item"><i class="bi bi-clock"></i> 20 Hours</div>
+                      <div class="course-meta-item"><i class="bi bi-car-front"></i> Automatic Car</div>
+                      <div class="course-meta-item"><i class="bi bi-person-check"></i> 1-on-1 In-Car</div>
+                      <div class="course-meta-item"><i class="bi bi-award"></i> Certificate</div>
+                    </div>
+                    <div class="course-card-footer">
+                      <div class="course-price">$650</div>
+                      <a href="course-details.html" class="btn btn-outline-primary btn-sm">Course Details</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Course 2 -->
+              <div class="carousel-slide">
+                <div class="course-card">
+                  <div class="course-card-img-wrap">
+                    <img src="../assets/images/course-manual-car.jpg" alt="Manual Stick Shift Mastery" loading="lazy">
+                    <span class="course-card-badge badge-accent"><i class="bi bi-gear-wide me-1"></i> Specialist
+                      Track</span>
+                  </div>
+                  <div class="course-card-body">
+                    <h3 class="h5 text-heading mb-2">Manual Stick Shift Mastery</h3>
+                    <p class="text-muted small mb-0">Learn friction point control, smooth gear shifting, clutch
+                      modulation, and stall-free steep hill starts.</p>
+                    <div class="course-meta-grid">
+                      <div class="course-meta-item"><i class="bi bi-clock"></i> 16 Hours</div>
+                      <div class="course-meta-item"><i class="bi bi-gear-wide-connected"></i> 6-Speed Manual</div>
+                      <div class="course-meta-item"><i class="bi bi-person-check"></i> 1-on-1 In-Car</div>
+                      <div class="course-meta-item"><i class="bi bi-award"></i> Certificate</div>
+                    </div>
+                    <div class="course-card-footer">
+                      <div class="course-price">$580</div>
+                      <a href="course-details.html" class="btn btn-outline-primary btn-sm">Course Details</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Course 3 -->
+              <div class="carousel-slide">
+                <div class="course-card">
+                  <div class="course-card-img-wrap">
+                    <img src="../assets/images/course-test-prep.jpg" alt="Road Test Prep & Mock Exam" loading="lazy">
+                    <span class="course-card-badge badge-secondary"><i class="bi bi-lightning-charge-fill me-1"></i>
+                      Fast Prep</span>
+                  </div>
+                  <div class="course-card-body">
+                    <h3 class="h5 text-heading mb-2">Road Test Prep &amp; Mock Exam</h3>
+                    <p class="text-muted small mb-0">Intensive route practice and mock testing along official DMV routes
+                      to eliminate critical driving faults.</p>
+                    <div class="course-meta-grid">
+                      <div class="course-meta-item"><i class="bi bi-clock"></i> 6 Hours</div>
+                      <div class="course-meta-item"><i class="bi bi-car-front"></i> Test Vehicle Inc.</div>
+                      <div class="course-meta-item"><i class="bi bi-clipboard-check"></i> Mock Rubric</div>
+                      <div class="course-meta-item"><i class="bi bi-award"></i> Warmup Drive</div>
+                    </div>
+                    <div class="course-card-footer">
+                      <div class="course-price">$295</div>
+                      <a href="course-details.html" class="btn btn-outline-primary btn-sm">Course Details</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Step-by-Step Learner Journey (Balanced Copy) -->
+    <section class="section-py bg-surface">
+      <div class="container">
+        <div class="section-header text-center reveal-item">
+          <span class="section-tag">4-Stage Learning Path</span>
+          <h2>How You Get Your Driver's License</h2>
+          <p class="text-muted">A clear, sequential milestone system taking you from beginner to fully licensed driver.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3 reveal-item">
+            <div class="card-apex p-4 text-center">
+              <div class="stat-value text-primary mb-2">01</div>
+              <h3 class="h6 mb-2">Assessment &amp; Controls</h3>
+              <p class="text-muted small mb-0">Learn cockpit setup, 3-mirror adjustment, blind spot checks, steering
+                controls, and smooth progressive braking.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal-item reveal-delay-1">
+            <div class="card-apex p-4 text-center">
+              <div class="stat-value text-primary mb-2">02</div>
+              <h3 class="h6 mb-2">Precision Maneuvers</h3>
+              <p class="text-muted small mb-0">Master parallel parking, reverse bay positioning, tight 3-point
+                turnarounds, and smooth curb alignment.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal-item reveal-delay-2">
+            <div class="card-apex p-4 text-center">
+              <div class="stat-value text-primary mb-2">03</div>
+              <h3 class="h6 mb-2">Traffic &amp; Highway Navigation</h3>
+              <p class="text-muted small mb-0">Gain confidence navigating busy multi-lane roundabouts, complex signals,
+                and highway on-ramp speed matching.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal-item reveal-delay-3">
+            <div class="card-apex p-4 text-center">
+              <div class="stat-value text-primary mb-2">04</div>
+              <h3 class="h6 mb-2">Mock Test &amp; Licensing</h3>
+              <p class="text-muted small mb-0">Take simulated route exams scored with state criteria, then complete your
+                official road test with confidence.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Featured Certified Instructors (Rule A: pb-0) -->
+    <section class="section-py bg-surface-alt pb-0">
+      <div class="container">
+        <div class="section-header-row reveal-item">
+          <div>
+            <span class="section-tag">Certified Faculty</span>
+            <h2>Learn from State-Certified Coaches</h2>
+            <p class="text-muted mb-0">Patient, background-checked instructors dedicated to calm and supportive
+              training.</p>
+          </div>
+          <a href="instructors.html" class="btn btn-outline-primary">
+            View All Instructors &rarr;
+          </a>
+        </div>
+
+        <div class="row g-4">
+          <!-- Instructor 1 -->
+          <div class="col-md-6 col-lg-3 reveal-item">
+            <div class="instructor-card">
+              <div class="instructor-avatar-wrap">
+                <img src="../assets/images/instructor-marcus.jpg" alt="Marcus Vance" loading="lazy">
+              </div>
+              <div class="instructor-card-body">
+                <h3 class="h6 text-heading mb-1">Marcus Vance</h3>
+                <span class="text-primary small fw-semibold mb-2">Lead Senior Instructor</span>
+                <span class="text-muted small mb-2"><i class="bi bi-award me-1"></i> 12 Years Experience</span>
+                <p class="text-muted small mb-3">Specializes in beginner confidence, manual stick shift mastery, and
+                  parallel parking.</p>
+                <div class="mt-auto pt-2 border-top">
+                  <a href="instructor-details.html" class="btn btn-outline-primary btn-sm w-100">View Bio &amp;
+                    Schedule</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Instructor 2 -->
+          <div class="col-md-6 col-lg-3 reveal-item reveal-delay-1">
+            <div class="instructor-card">
+              <div class="instructor-avatar-wrap">
+                <img src="../assets/images/instructor-elena.jpg" alt="Elena Rostova" loading="lazy">
+              </div>
+              <div class="instructor-card-body">
+                <h3 class="h6 text-heading mb-1">Elena Rostova</h3>
+                <span class="text-primary small fw-semibold mb-2">Highway &amp; Defensive Coach</span>
+                <span class="text-muted small mb-2"><i class="bi bi-award me-1"></i> 9 Years Experience</span>
+                <p class="text-muted small mb-3">Expert in highway speed matching, adverse weather safety, and night
+                  driving.</p>
+                <div class="mt-auto pt-2 border-top">
+                  <a href="instructor-details.html" class="btn btn-outline-primary btn-sm w-100">View Bio &amp;
+                    Schedule</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Instructor 3 -->
+          <div class="col-md-6 col-lg-3 reveal-item reveal-delay-2">
+            <div class="instructor-card">
+              <div class="instructor-avatar-wrap">
+                <img src="../assets/images/instructor-tariq.jpg" alt="Tariq Al-Mansoor" loading="lazy">
+              </div>
+              <div class="instructor-card-body">
+                <h3 class="h6 text-heading mb-1">Tariq Al-Mansoor</h3>
+                <span class="text-primary small fw-semibold mb-2">Motorcycle &amp; Scooter Lead</span>
+                <span class="text-muted small mb-2"><i class="bi bi-award me-1"></i> 11 Years Experience</span>
+                <p class="text-muted small mb-3">Certified rider coach focusing on balance, emergency swerving, and
+                  urban lane positioning.</p>
+                <div class="mt-auto pt-2 border-top">
+                  <a href="instructor-details.html" class="btn btn-outline-primary btn-sm w-100">View Bio &amp;
+                    Schedule</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Instructor 4 -->
+          <div class="col-md-6 col-lg-3 reveal-item reveal-delay-3">
+            <div class="instructor-card">
+              <div class="instructor-avatar-wrap">
+                <img src="../assets/images/instructor-samantha.jpg" alt="Samantha Reed" loading="lazy">
+              </div>
+              <div class="instructor-card-body">
+                <h3 class="h6 text-heading mb-1">Samantha Reed</h3>
+                <span class="text-primary small fw-semibold mb-2">Road Test Prep Specialist</span>
+                <span class="text-muted small mb-2"><i class="bi bi-award me-1"></i> 8 Years Experience</span>
+                <p class="text-muted small mb-3">Specialist in simulated test route audits and zero-critical-fault road
+                  exam routines.</p>
+                <div class="mt-auto pt-2 border-top">
+                  <a href="instructor-details.html" class="btn btn-outline-primary btn-sm w-100">View Bio &amp;
+                    Schedule</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Dual-Control Fleet Showcase (Responsive Carousel & Stacked Specs) -->
+    <section class="section-py bg-surface-alt pb-0">
+      <div class="container">
+        <div class="section-header-row reveal-item">
+          <div>
+            <span class="section-tag">Training Vehicles</span>
+            <h2>Modern Dual-Control Fleet</h2>
+            <p class="text-muted mb-0">Every vehicle features dual instructor pedals, backup cameras, and advanced
+              safety tech.</p>
+          </div>
+          <div class="d-flex align-items-center gap-3">
+            <a href="vehicles.html" class="btn btn-outline-primary">
+              View Complete Fleet &rarr;
+            </a>
+            <div class="carousel-controls d-lg-none">
+              <button type="button" class="carousel-btn carousel-prev" aria-label="Previous vehicle"><i
+                  class="bi bi-chevron-left"></i></button>
+              <button type="button" class="carousel-btn carousel-next" aria-label="Next vehicle"><i
+                  class="bi bi-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="responsive-carousel desktop-grid" data-carousel>
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <!-- Vehicle 1 -->
+              <div class="carousel-slide">
+                <div class="vehicle-card">
+                  <div class="vehicle-card-img-wrap">
+                    <img src="../assets/images/vehicle-sedan.jpg" alt="Toyota Corolla Dual-Control Sedan"
+                      loading="lazy">
+                  </div>
+                  <div class="vehicle-card-body">
+                    <h3 class="h5 text-heading mb-1">Toyota Corolla Dual-Control</h3>
+                    <span class="text-primary small fw-semibold">Automatic Sedan</span>
+                    <div class="vehicle-spec-list">
+                      <div class="vehicle-spec-item"><span>Controls</span><strong>Dual Brake &amp; Gas
+                          Overrides</strong></div>
+                      <div class="vehicle-spec-item"><span>Safety</span><strong>5-Star NHTSA / 8 Airbags</strong></div>
+                      <div class="vehicle-spec-item"><span>Visibility</span><strong>Rearview Camera &amp;
+                          Sensors</strong></div>
+                    </div>
+                    <div class="mt-auto pt-2 border-top">
+                      <a href="booking.html" class="btn btn-outline-primary btn-sm w-100">Book in this Car</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Vehicle 2 -->
+              <div class="carousel-slide">
+                <div class="vehicle-card">
+                  <div class="vehicle-card-img-wrap">
+                    <img src="../assets/images/vehicle-suv.jpg" alt="Honda CR-V Dual-Control Crossover" loading="lazy">
+                  </div>
+                  <div class="vehicle-card-body">
+                    <h3 class="h5 text-heading mb-1">Honda CR-V Dual-Control</h3>
+                    <span class="text-primary small fw-semibold">Automatic Compact SUV</span>
+                    <div class="vehicle-spec-list">
+                      <div class="vehicle-spec-item"><span>Controls</span><strong>Dual Instructor Brake
+                          Override</strong></div>
+                      <div class="vehicle-spec-item"><span>Seating</span><strong>High-Visibility Elevated View</strong>
+                      </div>
+                      <div class="vehicle-spec-item"><span>Assistance</span><strong>Blind Spot Information
+                          System</strong></div>
+                    </div>
+                    <div class="mt-auto pt-2 border-top">
+                      <a href="booking.html" class="btn btn-outline-primary btn-sm w-100">Book in this SUV</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Vehicle 3 -->
+              <div class="carousel-slide">
+                <div class="vehicle-card">
+                  <div class="vehicle-card-img-wrap">
+                    <img src="../assets/images/vehicle-hatchback.jpg" alt="VW Golf Manual 6-Speed" loading="lazy">
+                  </div>
+                  <div class="vehicle-card-body">
+                    <h3 class="h5 text-heading mb-1">VW Golf Dual-Clutch</h3>
+                    <span class="text-primary small fw-semibold">6-Speed Manual Hatchback</span>
+                    <div class="vehicle-spec-list">
+                      <div class="vehicle-spec-item"><span>Controls</span><strong>Dual Clutch &amp; Brake
+                          Pedals</strong></div>
+                      <div class="vehicle-spec-item"><span>Feature</span><strong>Hill-Start Assist Technology</strong>
+                      </div>
+                      <div class="vehicle-spec-item"><span>Handling</span><strong>Tight 35ft Turning Radius</strong>
+                      </div>
+                    </div>
+                    <div class="mt-auto pt-2 border-top">
+                      <a href="booking.html" class="btn btn-outline-primary btn-sm w-100">Book Manual Training</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Safety & Training Standards Breakdown -->
+    <section class="section-py bg-surface-alt">
+      <div class="container">
+        <div class="card-apex p-4 p-md-5 bg-surface border-primary reveal-item">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <span class="section-tag">Safety First</span>
+              <h2 class="h3 mb-3">Our 100% Dual-Control Safety Standard</h2>
+              <p class="text-muted mb-3">
+                Every vehicle in our training fleet is custom-engineered with dual instructor pedals and wide-angle
+                auxiliary mirrors. If a beginner freezes or encounters an unexpected hazard, the certified instructor
+                instantly has full control of brakes and steering.
+              </p>
+              <ul class="d-flex flex-column gap-2 text-muted small p-0 mb-0" style="list-style: none;">
+                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Dual instructor pedals installed and
+                  tested daily</li>
+                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Clean title, late-model fleet with 5-star
+                  crash ratings</li>
+                <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Comprehensive commercial driving academy
+                  insurance coverage</li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <div class="course-card-img-wrap rounded-4">
+                <img src="../assets/images/about-driving.jpg" alt="Instructor in car safety coaching" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Student Testimonials (Responsive Carousel) -->
+    <section class="section-py bg-surface pb-0">
+      <div class="container">
+        <div class="section-header-row reveal-item">
+          <div>
+            <span class="section-tag">Learner Experiences</span>
+            <h2>What Our Graduate Drivers Say</h2>
+            <p class="text-muted mb-0">Hear from real learners who passed their road test on their very first attempt.
+            </p>
+          </div>
+          <div class="carousel-controls d-lg-none">
+            <button type="button" class="carousel-btn carousel-prev" aria-label="Previous review"><i
+                class="bi bi-chevron-left"></i></button>
+            <button type="button" class="carousel-btn carousel-next" aria-label="Next review"><i
+                class="bi bi-chevron-right"></i></button>
+          </div>
+        </div>
+
+        <div class="responsive-carousel desktop-grid" data-carousel>
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <!-- Review 1 -->
+              <div class="carousel-slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-rating">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p class="text-muted small mb-3">
+                    "I had terrible driving anxiety after failing my test twice. Instructor Marcus broke down parallel
+                    parking into simple reference points. I passed with only 2 minor points!"
+                  </p>
+                  <div class="testimonial-author">
+                    <img src="../assets/images/student-david.jpg" alt="David Miller" class="testimonial-avatar">
+                    <div>
+                      <strong class="d-block text-heading small">David Miller</strong>
+                      <span class="text-muted small">Passed Class B License</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review 2 -->
+              <div class="carousel-slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-rating">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p class="text-muted small mb-3">
+                    "Elena was incredible during highway sessions. She taught me how to smoothly match on-ramp speeds
+                    and merge without panicking. The student dashboard kept me motivated!"
+                  </p>
+                  <div class="testimonial-author">
+                    <img src="../assets/images/student-sarah.jpg" alt="Sarah Chen" class="testimonial-avatar">
+                    <div>
+                      <strong class="d-block text-heading small">Sarah Chen</strong>
+                      <span class="text-muted small">Passed Road Test</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review 3 -->
+              <div class="carousel-slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-rating">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p class="text-muted small mb-3">
+                    "Learning manual stick shift was intimidating until I booked the Golf sessions with Marcus. His
+                    clutch biting point exercises made everything click in just two lessons."
+                  </p>
+                  <div class="testimonial-author">
+                    <img src="../assets/images/student-jordan.jpg" alt="Jordan Taylor" class="testimonial-avatar">
+                    <div>
+                      <strong class="d-block text-heading small">Jordan Taylor</strong>
+                      <span class="text-muted small">Manual License Graduate</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Transparent Tuition & Fees (Responsive Carousel on Tablet/Mobile) -->
+    <section class="section-py bg-surface">
+      <div class="container">
+        <div class="section-header-row reveal-item">
+          <div>
+            <span class="section-tag">Transparent Tuition</span>
+            <h2>Simple, All-Inclusive Course Pricing</h2>
+            <p class="text-muted mb-0">No hidden fuel surcharges or surprise vehicle rental fees on test day.</p>
+          </div>
+          <div class="carousel-controls d-lg-none">
+            <button type="button" class="carousel-btn carousel-prev" aria-label="Previous pricing package"><i
+                class="bi bi-chevron-left"></i></button>
+            <button type="button" class="carousel-btn carousel-next" aria-label="Next pricing package"><i
+                class="bi bi-chevron-right"></i></button>
+          </div>
+        </div>
+
+        <div class="responsive-carousel desktop-grid" data-carousel>
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <!-- Package 1 -->
+              <div class="carousel-slide">
+                <div class="pricing-card">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="badge-apex badge-secondary">Standard Track</span>
+                  </div>
+                  <h3 class="h5 text-heading mb-1">Starter Package</h3>
+                  <span class="text-muted small">Basic maneuvers &amp; foundational control</span>
+                  <div class="pricing-amount">$340</div>
+                  <span class="text-muted small">10 Hours Behind-the-Wheel</span>
+                  <ul class="pricing-feature-list">
+                    <li><i class="bi bi-check-circle-fill"></i> 5 x 2-Hour In-Car Lessons</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Dual-Control Automatic Vehicle</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Parking &amp; Intersection Control</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Online Progress Portal Access</li>
+                  </ul>
+                  <div class="mt-auto">
+                    <a href="booking.html" class="btn btn-outline-primary w-100">Enroll Starter</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Package 2 -->
+              <div class="carousel-slide">
+                <div class="pricing-card featured">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="badge-apex badge-primary"><i class="bi bi-star-fill me-1"></i> Best Value</span>
+                    <span class="text-muted small">Most Popular</span>
+                  </div>
+                  <h3 class="h5 text-heading mb-1">Complete License Package</h3>
+                  <span class="text-muted small">Full state-approved driver education</span>
+                  <div class="pricing-amount">$650</div>
+                  <span class="text-muted small">20 Hours + Road Test Car Included</span>
+                  <ul class="pricing-feature-list">
+                    <li><i class="bi bi-check-circle-fill"></i> 10 x 2-Hour In-Car Lessons</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Highway &amp; Night Driving Modules</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Mock Road Test Simulation</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Academy Car for Official Road Exam</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Free Home Pickup &amp; Drop-off</li>
+                  </ul>
+                  <div class="mt-auto">
+                    <a href="booking.html" class="btn btn-primary w-100">Enroll Complete Course</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Package 3 -->
+              <div class="carousel-slide">
+                <div class="pricing-card">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="badge-apex badge-secondary">Quick Polish</span>
+                  </div>
+                  <h3 class="h5 text-heading mb-1">Road Test Express</h3>
+                  <span class="text-muted small">Quick polish &amp; test day rental</span>
+                  <div class="pricing-amount">$295</div>
+                  <span class="text-muted small">6 Hours + Warmup Drive</span>
+                  <ul class="pricing-feature-list">
+                    <li><i class="bi bi-check-circle-fill"></i> 2 x 2-Hour Intensive Polish Lessons</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Parallel Parking Refresher</li>
+                    <li><i class="bi bi-check-circle-fill"></i> 1-Hour Warmup Prior to Exam</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Academy Car &amp; Instructor at DMV</li>
+                  </ul>
+                  <div class="mt-auto">
+                    <a href="booking.html" class="btn btn-outline-primary w-100">Book Test Express</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. FAQ Accordion Section -->
+    <section class="section-py bg-surface-alt">
+      <div class="container">
+        <div class="section-header text-center reveal-item">
+          <span class="section-tag">Frequently Asked Questions</span>
+          <h2>Everything You Need to Know</h2>
+          <p class="text-muted">Answers regarding learner permits, instructor scheduling, and road test booking.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8 reveal-item">
+            <div class="accordion accordion-apex" id="homeFaq">
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Do I need a learner's permit before booking in-car lessons?
+                  </button>
+                </h3>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="faqOne"
+                  data-bs-parent="#homeFaq">
+                  <div class="accordion-body">
+                    Yes. Under state law, all behind-the-wheel instruction requires an active, unexpired learner's
+                    permit. If you have not passed your written knowledge test yet, we provide free online study guides
+                    to help you pass.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Can I use an ApexDrive training vehicle for my official DMV road test?
+                  </button>
+                </h3>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo"
+                  data-bs-parent="#homeFaq">
+                  <div class="accordion-body">
+                    Absolutely! Our Complete License and Road Test Express packages include vehicle rental for test day,
+                    complete with active commercial insurance, registration documents, and a 1-hour warmup drive with
+                    your instructor.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Do you offer free doorstep pickup and drop-off?
+                  </button>
+                </h3>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree"
+                  data-bs-parent="#homeFaq">
+                  <div class="accordion-body">
+                    Yes, complimentary home, school, or workplace pickup and drop-off is included for all students
+                    located within our primary service radius (up to 15 miles from our training facility).
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    What happens if I need to reschedule a booked lesson?
+                  </button>
+                </h3>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="faqFour"
+                  data-bs-parent="#homeFaq">
+                  <div class="accordion-body">
+                    You can reschedule any lesson directly through your Student Driver Portal with at least 24 hours'
+                    notice without any penalty or cancellation fee.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Final High-Impact CTA -->
+    <section class="section-cta">
+      <div class="container reveal-item">
+        <h2>Start Your Driver's License Journey Today</h2>
+        <p>Book your initial assessment drive with a state-certified instructor and gain confidence behind the wheel.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="booking.html" class="btn btn-primary btn-lg">
+            <i class="bi bi-calendar2-check me-1"></i> Book a Driving Lesson
+          </a>
+          <a href="fees.html" class="btn btn-outline-light btn-lg">
+            <i class="bi bi-cash-stack me-1"></i> View Tuition &amp; Packages
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Scroll-To-Top Button -->
+  <button type="button" class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+      <!-- Balanced High-Contrast Footer (Compact Tablet 3-Col & Mobile Stack) -->
+  <footer class="footer-apex">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Col 1: Academy Brand & Mission -->
+        <div class="col-12 col-lg-4 col-md-12">
+          <a class="footer-brand" href="index.html">
+            <img src="../assets/images/logo-white.svg" alt="ApexDrive" class="brand-logo-white footer-logo-img" height="42">
+          </a>
+          <p class="text-muted small mb-3">
+            Premier certified driving academy providing professional four-wheeler, two-wheeler, and manual transmission driver education.
+          </p>
+          <div class="d-flex gap-2 mb-3 mb-lg-0">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="footer-heading">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right small"></i> Home Page 1</a></li>
+            <li><a href="home-2.html"><i class="bi bi-chevron-right small"></i> Home Page 2</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right small"></i> About Us</a></li>
+            <li><a href="courses.html"><i class="bi bi-chevron-right small"></i> Courses</a></li>
+            <li><a href="instructors.html"><i class="bi bi-chevron-right small"></i> Instructors</a></li>
+            <li><a href="vehicles.html"><i class="bi bi-chevron-right small"></i> Fleet</a></li>
+            <li><a href="fees.html"><i class="bi bi-chevron-right small"></i> Tuition &amp; Fees</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right small"></i> Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Student Portal -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="footer-heading">Student Portal</div>
+          <ul class="footer-links">
+            <li><a href="booking.html"><i class="bi bi-chevron-right small"></i> Book a Lesson</a></li>
+            <li><a href="dashboard/student-dashboard.html"><i class="bi bi-chevron-right small"></i> Student Dashboard</a></li>
+            <li><a href="login.html"><i class="bi bi-chevron-right small"></i> Student Login</a></li>
+            <li><a href="register.html"><i class="bi bi-chevron-right small"></i> New Enrollment</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right small"></i> Learner Guides &amp; Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Training Grounds & Contact -->
+        <div class="col-12 col-md-4 col-lg-3">
+          <div class="footer-heading">Training Grounds</div>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>742 Safety Blvd, Metro City, ST 90210</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <span>(555) 234-5678</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <span>admissions@apexdriveacademy.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-clock-fill"></i>
+            <span>Mon - Sun: 7:00 AM - 8:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>&copy; 2026 ApexDrive. All rights reserved.</div>
+        <div class="d-flex flex-wrap justify-content-center justify-content-md-end gap-3">
+          <a href="about.html" class="text-muted small">Privacy Policy</a>
+          <a href="about.html" class="text-muted small">Terms of Service</a>
+          <span class="text-muted small">State Commercial Facility #DS-4921</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

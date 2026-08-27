@@ -1,0 +1,530 @@
+/* ==========================================================================
+   ApexDrive Academy - Student Dashboard Stylesheet
+   Specialized layout, progress tracking, booking wizard & responsive sidebar
+   ========================================================================== */
+
+/* --- 1. Dashboard Layout Structure & Sticky Header --- */
+.dashboard-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  height: 64px;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+[data-bs-theme="dark"] .dashboard-header {
+  background-color: #0b1120;
+  border-bottom-color: #1e293b;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-wrapper {
+  display: flex;
+  width: 100%;
+  min-height: calc(100vh - 64px);
+  background-color: var(--color-bg);
+}
+
+/* Desktop Sidebar */
+.dashboard-sidebar {
+  width: 270px;
+  background-color: var(--color-surface);
+  border-inline-end: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  transition: transform var(--transition-base), width var(--transition-base);
+  z-index: 1010;
+}
+
+.dashboard-sidebar-header {
+  padding: 1.25rem 1.25rem 1rem;
+  border-bottom: 1px solid var(--color-border-subtle);
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.student-avatar-wrap {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 2px solid var(--brand-600);
+  flex-shrink: 0;
+}
+
+.student-avatar-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.student-status-dot {
+  position: absolute;
+  bottom: 0;
+  inset-inline-end: 0;
+  width: 11px;
+  height: 11px;
+  border-radius: var(--radius-full);
+  background-color: var(--brand-500);
+  border: 2px solid var(--color-surface);
+}
+
+.dashboard-nav {
+  list-style: none;
+  padding: 0.85rem 0.65rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex-grow: 1;
+}
+
+.dashboard-nav-item .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 0.9rem;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  border: 1px solid transparent;
+  min-height: 44px;
+}
+
+.dashboard-nav-item .nav-link i {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.dashboard-nav-item .nav-link:hover {
+  background-color: var(--color-surface-alt);
+  color: var(--brand-700);
+}
+
+.dashboard-nav-item .nav-link:hover i {
+  color: var(--brand-700);
+}
+
+.dashboard-nav-item .nav-link.active {
+  background-color: var(--brand-50);
+  color: var(--brand-700);
+  border-color: var(--brand-200);
+}
+
+.dashboard-nav-item .nav-link.active i {
+  color: var(--brand-700);
+}
+
+/* Dashboard Main Content Area */
+.dashboard-content-area {
+  flex: 1 1 100%;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  padding: clamp(1.25rem, 2.5vw, 2.25rem);
+  box-sizing: border-box;
+}
+
+.dashboard-tab-content {
+  width: 100%;
+  min-width: 0;
+}
+
+/* --- 2. Training Hours & Progress Widgets --- */
+.hours-progress-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  min-width: 0;
+}
+
+.progress-bar-custom {
+  height: 12px;
+  background-color: var(--color-border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin: 1rem 0 0.5rem;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--brand-600);
+  border-radius: var(--radius-full);
+  transition: width 1s ease-in-out;
+}
+
+.stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+/* Stage Curriculum Grid */
+.stage-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .stage-grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Milestone Badge Grid (Brand Family Hierarchy) */
+.milestones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 0.85rem;
+}
+
+.milestone-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all var(--transition-fast);
+}
+
+.milestone-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* Mastered: Primary Strong */
+.milestone-item.completed .milestone-icon {
+  background-color: var(--brand-700);
+  color: #ffffff;
+  border: 1.5px solid var(--brand-700);
+}
+
+/* In Progress: Primary Medium */
+.milestone-item.in-progress .milestone-icon {
+  background-color: var(--brand-100);
+  color: var(--brand-700);
+  border: 1.5px solid var(--brand-300);
+}
+
+/* Pending: Primary Soft / Neutral */
+.milestone-item.locked .milestone-icon {
+  background-color: var(--color-surface-alt);
+  color: var(--color-text-subtle);
+  border: 1.5px solid var(--color-border);
+}
+
+/* --- 3. Interactive Booking Wizard (Dashboard) --- */
+.wizard-steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.wizard-steps::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  inset-inline-start: 10%;
+  inset-inline-end: 10%;
+  height: 2px;
+  background: var(--color-border);
+  z-index: 0;
+}
+
+.wizard-step-node {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.wizard-node-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  transition: all var(--transition-fast);
+}
+
+.wizard-step-node.active .wizard-node-circle {
+  background: var(--brand-700);
+  border-color: var(--brand-700);
+  color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(var(--color-primary-rgb), 0.2);
+}
+
+.wizard-step-node.completed .wizard-node-circle {
+  background: var(--brand-600);
+  border-color: var(--brand-600);
+  color: #ffffff;
+}
+
+.wizard-node-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.wizard-step-node.active .wizard-node-label {
+  color: var(--brand-700);
+}
+
+/* Time Slot Selector Chips */
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+
+.slot-chip {
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  transition: all var(--transition-fast);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slot-chip:hover:not(.unavailable) {
+  border-color: var(--brand-600);
+  background-color: var(--brand-50);
+  color: var(--brand-700);
+}
+
+.slot-chip.selected {
+  background-color: var(--brand-700);
+  border-color: var(--brand-700);
+  color: #ffffff;
+}
+
+.slot-chip.unavailable {
+  background-color: var(--color-surface-alt);
+  border-color: var(--color-border-subtle);
+  color: var(--color-text-subtle);
+  cursor: not-allowed;
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* --- 4. Instructor Feedback Card System --- */
+.feedback-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: all var(--transition-base);
+}
+
+.feedback-card:hover {
+  border-color: var(--brand-300);
+  box-shadow: var(--shadow-sm);
+}
+
+.skills-tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.75rem 0;
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  background-color: var(--brand-50);
+  border: 1px solid var(--brand-200);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--brand-800);
+}
+
+/* --- 5. Printable Scorecard / Progress Report Styles --- */
+.printable-report {
+  background: #ffffff;
+  color: #0f172a;
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  margin-top: 1.5rem;
+  overflow-x: auto;
+}
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid var(--brand-900);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+  gap: 1rem;
+}
+
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.25rem;
+}
+
+/* --- 6. Dark Mode Overrides for Dashboard --- */
+[data-bs-theme="dark"] .dashboard-nav-item .nav-link {
+  color: #e2e8f0;
+}
+
+[data-bs-theme="dark"] .dashboard-nav-item .nav-link:hover {
+  background-color: #162036;
+  color: #60a5fa;
+}
+
+[data-bs-theme="dark"] .dashboard-nav-item .nav-link.active {
+  background-color: rgba(59, 130, 246, 0.22);
+  color: #93c5fd;
+  border-color: rgba(96, 165, 250, 0.4);
+}
+
+[data-bs-theme="dark"] .dashboard-nav-item .nav-link.active i {
+  color: #60a5fa;
+}
+
+[data-bs-theme="dark"] .slot-chip {
+  background: #0e1626;
+  border-color: #23324e;
+  color: #e2e8f0;
+}
+
+[data-bs-theme="dark"] .slot-chip:hover:not(.unavailable) {
+  border-color: #60a5fa;
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+}
+
+[data-bs-theme="dark"] .slot-chip.selected {
+  background-color: #2563eb;
+  border-color: #3b82f6;
+  color: #ffffff;
+}
+
+[data-bs-theme="dark"] .report-grid {
+  background: #162036;
+}
+
+/* Milestone Dark Mode Hierarchy */
+[data-bs-theme="dark"] .milestone-item.completed .milestone-icon {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: 1.5px solid #3b82f6;
+}
+
+[data-bs-theme="dark"] .milestone-item.in-progress .milestone-icon {
+  background-color: rgba(37, 99, 235, 0.35);
+  color: #93c5fd;
+  border: 1.5px solid #60a5fa;
+}
+
+[data-bs-theme="dark"] .milestone-item.locked .milestone-icon {
+  background-color: #162036;
+  color: #64748b;
+  border: 1.5px solid #23324e;
+}
+
+/* --- 7. Tablet & Mobile Responsive Adaptations --- */
+@media (max-width: 991.98px) {
+  /* Hide desktop permanent sidebar */
+  .dashboard-sidebar.desktop-sidebar {
+    display: none !important;
+  }
+  
+  .dashboard-wrapper {
+    flex-direction: column;
+  }
+
+  .dashboard-content-area {
+    padding: clamp(1rem, 2.5vw, 1.5rem);
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .report-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 639px) {
+  .report-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .milestones-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .report-header {
+    flex-direction: column;
+  }
+}

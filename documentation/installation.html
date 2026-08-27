@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Installation Guide - ApexDrive Template Documentation</title>
+  <meta name="description" content="Setup and installation instructions for ApexDrive Academy Driving School HTML Template.">
+  
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body class="bg-surface-alt">
+  
+  <header class="py-3 bg-surface border-bottom sticky-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand m-0" href="../pages/index.html">
+        <span class="brand-badge"><i class="bi bi-compass"></i></span>
+        <span>Apex<span class="text-primary">Drive</span> Docs</span>
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle theme"><i class="bi bi-moon-stars-fill"></i></button>
+        <a href="../pages/index.html" class="btn btn-outline-primary btn-sm">Live Preview</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container py-5">
+    <div class="row g-5">
+      <!-- Doc Sidebar -->
+      <div class="col-lg-3">
+        <div class="card-apex p-3 sticky-top" style="top: 90px;">
+          <h2 class="h6 mb-3 text-uppercase text-muted" style="font-size: 0.75rem; letter-spacing: 1px;">Documentation</h2>
+          <ul class="footer-links">
+            <li><a href="installation.html" class="text-primary fw-bold"><i class="bi bi-box-arrow-right small"></i> Installation</a></li>
+            <li><a href="customization.html"><i class="bi bi-sliders small"></i> Customization</a></li>
+            <li><a href="credits.html"><i class="bi bi-award small"></i> Credits &amp; Sources</a></li>
+            <li><a href="changelog.html"><i class="bi bi-clock-history small"></i> Changelog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Doc Body -->
+      <div class="col-lg-9">
+        <div class="card-apex p-4 p-md-5">
+          <span class="badge-apex badge-primary mb-2">Getting Started</span>
+          <h1 class="h2 mb-3">Installation &amp; Setup Guide</h1>
+          <p class="lead text-muted mb-4">
+            Welcome to the ApexDrive Academy HTML template. This guide explains the project structure and how to run or deploy the template locally and on production servers.
+          </p>
+
+          <hr class="my-4">
+
+          <h2 class="h4 mb-3">1. Folder Structure Overview</h2>
+          <pre class="p-3 bg-surface-alt rounded-3 border small"><code>driving-school-template/
+├── assets/
+│   ├── css/
+│   │   ├── style.css           # Core Design Tokens, Resets & Global Components
+│   │   ├── dark-mode.css       # Semantic Dark Theme Overrides
+│   │   ├── rtl.css             # Right-to-Left (RTL) Directional Rules
+│   │   └── dashboard.css       # Student Dashboard & Printable Report Styles
+│   ├── js/
+│   │   ├── main.js             # Theme Toggling, RTL, Form Validation, Filters
+│   │   └── dashboard.js        # Student Dashboard Wizard, Progress & Reports
+│   └── images/                 # Optimized Vector Graphics & Icons
+├── pages/
+│   ├── index.html              # Home Page 1 (Classic Academy)
+│   ├── home-2.html             # Home Page 2 (Fast-Track License)
+│   ├── about.html              # School Story & Standards
+│   ├── courses.html            # All 2-Wheeler & 4-Wheeler Courses
+│   ├── course-details.html     # Deep Syllabus & Vehicle Specs
+│   ├── instructors.html        # Certified Instructor Directory
+│   ├── instructor-details.html # Instructor Profile & Weekly Schedule
+│   ├── vehicles.html           # Dual-Control Training Fleet
+│   ├── fees.html               # Tuition & Transparent Pricing
+│   ├── booking.html            # 5-Step Lesson Booking Wizard
+│   ├── blog.html               # Learner Resource Center
+│   ├── blog-details.html       # Road Test Tips & Safety Guides
+│   ├── contact.html            # Admissions Form & Training Ground Location
+│   ├── login.html              # Student Portal Authentication
+│   ├── register.html           # Student Enrollment Onboarding
+│   ├── 404.html                # Branded 404 Error Page
+│   ├── coming-soon.html        # VR Simulator Lab Launch Page
+│   └── dashboard/
+│       └── student-dashboard.html # Full Student Portal (No Admin Dashboard)
+├── documentation/              # Full Template Guides & Credits
+├── sitemap.xml                 # SEO Sitemap
+├── robots.txt                  # Search Engine Crawl Directives
+└── README.md                   # Quickstart Summary</code></pre>
+
+          <h2 class="h4 mt-5 mb-3">2. Running the Template Locally</h2>
+          <p class="text-muted small mb-2">You can open any HTML file directly in your browser, or serve it via a local static web server:</p>
+          <div class="p-3 bg-surface-alt rounded-3 border small mb-4">
+            <code># Using Python 3:<br>python3 -m http.server 8080<br><br># Or using Node npx serve:<br>npx serve .</code>
+          </div>
+
+          <h2 class="h4 mt-4 mb-3">3. Production Deployment</h2>
+          <p class="text-muted small">
+            ApexDrive is 100% static HTML5, CSS3, and modern Vanilla JS. You can deploy it to any static web host such as <strong>GitHub Pages, Netlify, Vercel, Cloudflare Pages, AWS S3, or Apache/Nginx</strong> by uploading the root directory.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

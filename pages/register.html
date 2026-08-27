@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration &amp; Enrollment - ApexDrive</title>
+  <meta name="description" content="Enroll in ApexDrive driver education courses. Create your student account to schedule in-car lessons and track your competencies.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo-mark.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom Design System -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+</head>
+<body>
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <main id="main-content" class="auth-wrapper">
+    <div class="auth-card" style="max-width: 540px;">
+      
+      <div class="auth-header">
+        <a href="index.html" class="d-inline-block">
+          <img src="../assets/images/logo.svg" alt="ApexDrive" class="auth-logo brand-logo-svg" height="42">
+        </a>
+        <h1 class="h4 text-heading mb-1">New Student Registration</h1>
+        <p class="text-muted small mb-0">Create your account to begin behind-the-wheel driver training.</p>
+      </div>
+
+      <form class="needs-validation" novalidate action="dashboard/student-dashboard.html" method="get">
+        
+        <div class="row g-3 mb-3">
+          <div class="col-sm-6">
+            <label for="regFirstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="regFirstName" placeholder="Enter first name" required autocomplete="given-name">
+            <div class="invalid-feedback">Please enter your first name.</div>
+          </div>
+          <div class="col-sm-6">
+            <label for="regLastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="regLastName" placeholder="Enter last name" required autocomplete="family-name">
+            <div class="invalid-feedback">Please enter your last name.</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="regEmail" class="form-label">Email Address</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+            <input type="email" class="form-control" id="regEmail" placeholder="Enter your email address" required autocomplete="email">
+            <div class="invalid-feedback">Please enter a valid email.</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="regPhone" class="form-label">Phone Number</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+            <input type="tel" class="form-control" id="regPhone" placeholder="Enter your phone number" required autocomplete="tel">
+            <div class="invalid-feedback">Please enter your phone number.</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="regProgram" class="form-label">Target Driver Training Program</label>
+          <select class="form-select" id="regProgram" required>
+            <option value="" selected disabled>Select course track...</option>
+            <option value="beginner">Beginner Driver License Program (Class B Automatic &bull; 20 Hrs)</option>
+            <option value="manual">Manual Transmission Stick Shift Mastery (16 Hrs)</option>
+            <option value="motorcycle">Class M Motorcycle &amp; Scooter License (14 Hrs)</option>
+            <option value="testprep">Road Test Prep &amp; Mock Exam (6 Hrs)</option>
+            <option value="defensive">Defensive Driving Hazard Avoidance (8 Hrs)</option>
+          </select>
+          <div class="invalid-feedback">Please select your program.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="regPassword" class="form-label">Create Password</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-lock"></i></span>
+            <input type="password" class="form-control" id="regPassword" placeholder="Minimum 8 characters" required minlength="8">
+            <button class="btn btn-outline-secondary password-toggle-btn" type="button" data-target="regPassword" aria-label="Toggle password visibility">
+              <i class="bi bi-eye-fill"></i>
+            </button>
+            <div class="invalid-feedback">Password must be at least 8 characters.</div>
+          </div>
+        </div>
+
+        <div class="form-check mb-4">
+          <input class="form-check-input" type="checkbox" id="regTerms" required>
+          <label class="form-check-label text-muted small" for="regTerms">
+            I agree to the <a href="about.html">Terms of Service</a>, <a href="about.html">Privacy Policy</a>, and confirm I meet the minimum driving age requirement.
+          </label>
+          <div class="invalid-feedback">You must agree to continue.</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100 btn-lg mb-3">
+          <i class="bi bi-person-plus me-1"></i> Create Student Account
+        </button>
+
+        <div class="text-center text-muted small mb-3">
+          Already registered? <a href="login.html" class="text-primary fw-semibold">Sign in here</a>
+        </div>
+
+        <div class="text-center pt-3 border-top">
+          <a href="index.html" class="text-muted small d-inline-flex align-items-center gap-1">
+            <i class="bi bi-house-door"></i> Home
+          </a>
+        </div>
+      </form>
+
+    </div>
+  </main>
+
+  <!-- Core Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

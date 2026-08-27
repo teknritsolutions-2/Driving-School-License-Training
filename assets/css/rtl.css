@@ -1,0 +1,76 @@
+/* ==========================================================================
+   ApexDrive Academy - RTL (Right-to-Left) Stylesheet
+   Activated via <html dir="rtl">
+   ========================================================================== */
+
+[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+}
+
+/* Typography & Layout Direction */
+[dir="rtl"] body {
+  text-align: right;
+}
+
+/* Directional Arrow / Chevron Mirroring */
+[dir="rtl"] .bi-arrow-right,
+[dir="rtl"] .bi-chevron-right,
+[dir="rtl"] .bi-arrow-left-short {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+/* Carousel Arrow Mirroring */
+[dir="rtl"] .carousel-btn .bi-chevron-left,
+[dir="rtl"] .carousel-btn .bi-chevron-right {
+  transform: scaleX(-1);
+}
+
+/* Breadcrumb in RTL */
+[dir="rtl"] .breadcrumb-apex .separator {
+  transform: scaleX(-1);
+}
+
+/* Offcanvas Drawer in RTL */
+[dir="rtl"] .offcanvas-apex {
+  border-inline-end: none;
+  border-inline-start: 1px solid var(--color-border);
+}
+
+/* Form Check Controls in RTL */
+[dir="rtl"] .form-check {
+  padding-right: 1.75em;
+  padding-left: 0;
+}
+
+[dir="rtl"] .form-check-input {
+  float: right;
+  margin-right: -1.75em;
+  margin-left: 0;
+}
+
+/* Dropdown Alignment in RTL */
+[dir="rtl"] .dropdown-menu {
+  text-align: right;
+}
+
+[dir="rtl"] .dropdown-menu-end {
+  --bs-position: start;
+}
+
+/* Toast Container in RTL */
+[dir="rtl"] .toast-container {
+  inset-inline-end: auto;
+  inset-inline-start: 1.5rem;
+}
+
+/* Footer Link Hover Movement */
+[dir="rtl"] .footer-links a:hover {
+  transform: translateX(-3px);
+}
+
+/* Nav Actions in RTL */
+[dir="rtl"] .navbar-nav {
+  padding-right: 0;
+}

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 44" fill="none" class="brand-logo-svg" role="img" aria-label="ApexDrive">
+  <g class="logo-mark">
+    <!-- Outer Steering Wheel Ring with Road Motif -->
+    <circle cx="22" cy="22" r="18" fill="url(#brandGrad)" />
+    <!-- Inner Road Way -->
+    <path d="M15 32 L20 12 L24 12 L29 32 Z" fill="#0B132B" opacity="0.25"/>
+    <path d="M16.5 31 L20.5 14 L23.5 14 L27.5 31 Z" fill="#FFFFFF"/>
+    <!-- Road Dashed Center Line -->
+    <line x1="22" y1="17" x2="22" y2="20" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="22" y1="24" x2="22" y2="28" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- Dynamic Steering Curve / Apex Wing -->
+    <path d="M8 19 C10 13, 15 9, 22 9 C29 9, 34 13, 36 19" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    <circle cx="22" cy="9" r="2" fill="#FFFFFF"/>
+  </g>
+  <!-- Brand Wordmark -->
+  <g class="logo-text">
+    <text x="48" y="29" font-family="'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="22" fill="#0F172A" letter-spacing="-0.5">Apex<tspan fill="#2563EB">Drive</tspan></text>
+  </g>
+  <defs>
+    <linearGradient id="brandGrad" x1="4" y1="4" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D4ED8"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+</svg>

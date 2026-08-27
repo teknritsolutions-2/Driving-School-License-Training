@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" fill="none" class="brand-mark-svg" role="img" aria-label="ApexDrive Icon">
+  <circle cx="26" cy="26" r="24" fill="url(#brandGradMark)" />
+  <path d="M17 40 L23 14 L29 14 L35 40 Z" fill="#0B132B" opacity="0.25"/>
+  <path d="M19 39 L24 16 L28 16 L33 39 Z" fill="#FFFFFF"/>
+  <line x1="26" y1="20" x2="26" y2="24" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round"/>
+  <line x1="26" y1="28" x2="26" y2="34" stroke="#1D4ED8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M9 22 C11 15, 17 10, 26 10 C35 10, 41 15, 43 22" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <circle cx="26" cy="10" r="2.5" fill="#FFFFFF"/>
+  <defs>
+    <linearGradient id="brandGradMark" x1="2" y1="2" x2="50" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D4ED8"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+</svg>
