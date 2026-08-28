@@ -237,13 +237,22 @@ function initScrollReveal() {
   });
 
   revealItems.forEach(item => {
-    // If inside a carousel track, mark visible immediately to avoid off-screen permanent hiding
-    if (item.closest('.carousel-track')) {
+    // On tablet/mobile (<= 1024px), carousel cards are immediately marked visible to prevent any conflict with sliding
+    if (window.innerWidth <= 1024 && item.closest('.carousel-track')) {
       item.classList.add('is-visible');
     } else {
       revealObserver.observe(item);
     }
   });
+
+  // On resize below 1025px, ensure any carousel cards are marked visible
+  window.addEventListener('resize', () => {
+    if (window.innerWidth <= 1024) {
+      document.querySelectorAll('.carousel-track .reveal-item').forEach(item => {
+        item.classList.add('is-visible');
+      });
+    }
+  }, { passive: true });
 }
 
 /**

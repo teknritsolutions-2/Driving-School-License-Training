@@ -1790,6 +1790,25 @@ img, svg {
 .reveal-delay-3 { transition-delay: 240ms; }
 .reveal-delay-4 { transition-delay: 320ms; }
 
+/* Responsive Carousel Card Reveal Behavior:
+   On Tablet and Mobile (<= 1024px), sliding cards MUST NOT receive zoom/reveal transforms,
+   because the carousel track and slides rely on horizontal flex translation and touch swiping.
+   On Desktop (>= 1025px), cards in static grid mode receive normal item-based zoom/reveal entrance.
+*/
+@media (max-width: 1024px) {
+  .responsive-carousel .carousel-slide,
+  .responsive-carousel .carousel-slide.reveal-item,
+  .responsive-carousel .carousel-slide .reveal-item,
+  .js .responsive-carousel .carousel-slide,
+  .js .responsive-carousel .carousel-slide.reveal-item,
+  .js .responsive-carousel .carousel-slide .reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    visibility: visible !important;
+  }
+}
+
 /* Toast */
 .toast-container {
   position: fixed;
