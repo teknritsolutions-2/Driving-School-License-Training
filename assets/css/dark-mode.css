@@ -39,8 +39,8 @@
 }
 
 /* Specific Dark Mode Component Overrides */
-[data-bs-theme="dark"] .navbar-apex {
-  background-color: rgba(14, 22, 38, 0.95);
+[data-bs-theme="dark"] .site-header {
+  background-color: rgba(11, 17, 32, 0.98);
   backdrop-filter: blur(12px);
   border-bottom-color: var(--color-border);
 }
@@ -68,7 +68,7 @@
 }
 
 [data-bs-theme="dark"] .offcanvas-apex .offcanvas-header {
-  background-color: var(--color-surface);
+  background-color: var(--brand-950);
   border-bottom-color: var(--color-border);
 }
 

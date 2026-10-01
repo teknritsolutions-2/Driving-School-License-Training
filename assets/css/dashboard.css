@@ -8,20 +8,51 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: var(--color-surface);
-  border-bottom: 1px solid var(--color-border);
+  background-color: var(--brand-950);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   height: 64px;
   min-height: 64px;
   display: flex;
   align-items: center;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   width: 100%;
 }
 
-[data-bs-theme="dark"] .dashboard-header {
-  background-color: #0b1120;
-  border-bottom-color: #1e293b;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+.dashboard-header .dashboard-profile-link {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dashboard-header .dashboard-profile-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.dashboard-header .theme-toggle-btn,
+.dashboard-header .rtl-toggle-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #e2e8f0;
+}
+
+.dashboard-header .theme-toggle-btn:hover,
+.dashboard-header .rtl-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.dashboard-header .dashboard-hamburger-btn {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.dashboard-header .dashboard-hamburger-btn:hover {
+  background-color: rgba(59, 130, 246, 0.25);
+  border-color: #60a5fa;
+  color: #ffffff;
 }
 
 .dashboard-wrapper {
@@ -34,6 +65,11 @@
 /* Desktop Sidebar */
 .dashboard-sidebar {
   width: 270px;
+  height: calc(100vh - 64px);
+  position: sticky;
+  top: 64px;
+  align-self: flex-start;
+  overflow-y: auto;
   background-color: var(--color-surface);
   border-inline-end: 1px solid var(--color-border);
   display: flex;
@@ -492,10 +528,38 @@
   border: 1.5px solid #23324e;
 }
 
+/* Sidebar footer keeps Logout at the bottom without positional offsets. */
+.dashboard-sidebar-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.dashboard-logout-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.65rem;
+  margin: 0 1rem 1rem;
+  min-height: 44px;
+}
+
+.dashboard-profile-link {
+  min-height: 42px;
+  white-space: nowrap;
+}
+
 /* --- 7. Tablet & Mobile Responsive Adaptations --- */
-@media (max-width: 991.98px) {
+@media (max-width: 1024px) {
   /* Hide desktop permanent sidebar */
   .dashboard-sidebar.desktop-sidebar {
+    display: none !important;
+  }
+
+  .dashboard-header .dashboard-hamburger-btn.d-lg-none {
+    display: inline-flex !important;
+  }
+
+  .dashboard-header .d-none.d-lg-flex {
     display: none !important;
   }
   
@@ -516,6 +580,19 @@
 }
 
 @media (max-width: 639px) {
+  .dashboard-header .container-fluid {
+    padding-inline: 0.85rem !important;
+  }
+
+  .dashboard-header .navbar-brand .brand-logo-svg {
+    width: 132px;
+    height: 36px;
+  }
+
+  .dashboard-profile-link {
+    padding-inline: 0.7rem;
+  }
+
   .report-grid {
     grid-template-columns: 1fr;
   }

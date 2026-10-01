@@ -38,6 +38,17 @@
   border-inline-start: 1px solid var(--color-border);
 }
 
+[dir="rtl"] .offcanvas-apex.offcanvas-start {
+  right: 0;
+  left: auto;
+  transform: translateX(100%);
+}
+
+[dir="rtl"] .offcanvas-apex.offcanvas-start.show,
+[dir="rtl"] .offcanvas-apex.offcanvas-start.showing {
+  transform: none;
+}
+
 /* Form Check Controls in RTL */
 [dir="rtl"] .form-check {
   padding-right: 1.75em;
