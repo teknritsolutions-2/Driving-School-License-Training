@@ -25,13 +25,14 @@
   * Dark + RTL
 * **Modern Technical Stack**: HTML5, Bootstrap 5.3.3, Custom CSS Variables, ES6+ Vanilla JS, and Bootstrap Icons.
 * **WCAG 2.1 AA Accessible**: High-contrast color palette, focus-visible outlines, skip links, semantic HTML5, and reduced motion queries.
-* **SEO Optimized**: Unique meta titles, structured headings, OpenGraph tags, sitemap.xml, and robots.txt.
+* **SEO Optimized**: Unique meta titles, structured headings, OpenGraph tags, and semantic schema markup.
 
 ---
 
 ## 📁 File Structure
 
 ```text
+Driving School & License Training/
 ├── assets/
 │   ├── css/
 │   │   ├── style.css           # Core Design Tokens & Global Components
@@ -44,7 +45,7 @@
 │   └── images/                 # Custom Vector Graphics & Illustrations
 │
 ├── pages/
-│   ├── index.html              # Home 1 - Classic Academy
+│   ├── index.html              # Home 1 - Classic Academy (Canonical Entry Point)
 │   ├── home-2.html             # Home 2 - Fast-Track License
 │   ├── about.html              # School Story, Standards & Timeline
 │   ├── courses.html            # Course Catalog with Category Filters
@@ -60,14 +61,11 @@
 │   ├── login.html              # Student Authentication UI
 │   ├── register.html           # Student Enrollment Onboarding
 │   ├── 404.html                # Branded 404 Error Page
-│   ├── coming-soon.html        # VR Simulator Lab Launch Page
 │   │
 │   └── dashboard/
 │       └── student-dashboard.html # Full Student Portal
 │
 ├── documentation/              # Full Template Guides, Credits & Changelog
-├── sitemap.xml                 # SEO Sitemap
-├── robots.txt                  # Crawl Directives
 └── README.md
 ```
 
