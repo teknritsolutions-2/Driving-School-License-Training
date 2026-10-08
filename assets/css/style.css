@@ -1461,6 +1461,11 @@ img, svg {
 .content-card {
   padding: clamp(1.35rem, 2.5vw, 1.8rem);
   height: 100%;
+  text-align: center;
+}
+
+.content-card .content-icon {
+  margin-inline: auto;
 }
 
 .learning-step {
@@ -1491,6 +1496,7 @@ img, svg {
   margin: 0;
   display: grid;
   gap: 0.8rem;
+  text-align: start;
 }
 
 .guidance-list li {
@@ -1839,12 +1845,18 @@ img, svg {
   flex-direction: column;
   position: relative;
   transition: all var(--transition-base);
+  text-align: center;
 }
 
 .pricing-card.featured {
   border-color: var(--brand-600);
   box-shadow: var(--shadow-lg);
   background-color: var(--color-surface);
+}
+
+.pricing-card .d-flex.justify-content-between {
+  justify-content: center !important;
+  gap: 0.5rem;
 }
 
 .pricing-amount {
@@ -1854,6 +1866,7 @@ img, svg {
   color: var(--color-heading);
   line-height: 1;
   margin: 1rem 0 0.5rem;
+  text-align: center;
 }
 
 .pricing-feature-list {
@@ -1864,18 +1877,22 @@ img, svg {
   flex-direction: column;
   gap: 0.75rem;
   font-size: 0.92rem;
+  align-items: center;
 }
 
 .pricing-feature-list li {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 0.6rem;
+  text-align: center;
 }
 
 .pricing-feature-list li i {
   color: var(--brand-600);
-  margin-top: 0.2rem;
+  margin-top: 0;
   font-size: 1.05rem;
+  flex-shrink: 0;
 }
 
 /* Testimonial Quote Card */
